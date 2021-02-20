@@ -7,6 +7,6 @@ target 'AccuraSDK_MRZ' do
   
   # Pods for CodeScan
   pod 'SVProgressHUD'
-  pod 'AccuraMRZSDK'
+  pod 'AccuraMRZSDK', :git => 'https://github.com/accurascan/MRZ-iOSSDK.git'
 end
 
