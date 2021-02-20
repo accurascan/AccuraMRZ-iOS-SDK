@@ -197,6 +197,5 @@ Generate your Accura license from https://accurascan.com/developer/dashboard <br
             message = message;
         }
     		print(message)
-		}
  	}
 ```
