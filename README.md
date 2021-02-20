@@ -99,10 +99,10 @@ Generate your Accura license from https://accurascan.com/developer/dashboard <br
      ```
      
    * Flip camera
-     ```
+  ```
      accuraCameraWrapper?.switchCamera()
-     ```
-    * Enable Print logs in MRZ
+  ```
+   * Enable Print logs in MRZ
     
     ```
      accuraCameraWrapper?.showLogFile(true) // Set true to print log from MRZ SDK
