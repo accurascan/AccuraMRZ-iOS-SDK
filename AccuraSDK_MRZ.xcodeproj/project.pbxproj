@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0021908E22ACE78400E08B01 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021908D22ACE78400E08B01 /* ListViewVC.swift */; };
-		315A94F5BFE7BD96CACAC0F5 /* Pods_AccuraSDK_MRZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C482BE668A587EB273E58D45 /* Pods_AccuraSDK_MRZ.framework */; };
 		5C67D9812111E40B00154EB7 /* default_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C67D9802111E40A00154EB7 /* default_user.png */; };
 		5C7D02532143CDFE00F05ADE /* DrivingPDFstringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D02512143CDFE00F05ADE /* DrivingPDFstringTableViewCell.swift */; };
 		5C7D02542143CDFE00F05ADE /* DrivingPDFstringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7D02522143CDFE00F05ADE /* DrivingPDFstringTableViewCell.xib */; };
@@ -65,6 +64,7 @@
 		A3E3D55C24A5BB710034A3EA /* key.license in Resources */ = {isa = PBXBuildFile; fileRef = A3E3D55B24A5BB710034A3EA /* key.license */; };
 		A3F172C2242250F30050FB25 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F172C1242250F30050FB25 /* Launch Screen.storyboard */; };
 		A3F172C624225BF60050FB25 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F172C524225BF60050FB25 /* LaunchScreenViewController.swift */; };
+		C6DCFFD79ADD805DD3EC56F8 /* Pods_AccuraSDK_MRZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C482BE668A587EB273E58D45 /* Pods_AccuraSDK_MRZ.framework */; };
 		DC75E60220BF36FB0096BC5A /* CodeInfoV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E60120BF36FB0096BC5A /* CodeInfoV.swift */; };
 		DC75E60420BF370A0096BC5A /* CodeInfoV.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC75E60320BF370A0096BC5A /* CodeInfoV.xib */; };
 		FAD8829923DDE04E007247EC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD8829623DDE04E007247EC /* MainStoryboard_iPhone.storyboard */; };
@@ -252,7 +252,7 @@
 				5C9AF4F82119997700700EDF /* SystemConfiguration.framework in Frameworks */,
 				5C9AF4F62119996D00700EDF /* libz.1.dylib in Frameworks */,
 				5C9AF4F42119995800700EDF /* libsqlite3.dylib in Frameworks */,
-				315A94F5BFE7BD96CACAC0F5 /* Pods_AccuraSDK_MRZ.framework in Frameworks */,
+				C6DCFFD79ADD805DD3EC56F8 /* Pods_AccuraSDK_MRZ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,8 +625,8 @@
 				6104CC7420BB4E6D00AC428E /* Resources */,
 				FA30D04B23DEE96300BA0DC0 /* ShellScript */,
 				A3D1BDD82594A31A00339909 /* Embed Frameworks */,
-				5359A2DCCE0505C4683DC525 /* [CP] Embed Pods Frameworks */,
-				F0DF52E72E852229C239A3EE /* [CP] Copy Pods Resources */,
+				F1523542E9409AE9E7EFB6C0 /* [CP] Embed Pods Frameworks */,
+				814C1F1F5E97041A5DAEBE83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -733,21 +733,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5359A2DCCE0505C4683DC525 /* [CP] Embed Pods Frameworks */ = {
+		814C1F1F5E97041A5DAEBE83 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98B08C984B7779B9C64FB4CA /* [CP] Check Pods Manifest.lock */ = {
@@ -772,21 +772,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F0DF52E72E852229C239A3EE /* [CP] Copy Pods Resources */ = {
+		F1523542E9409AE9E7EFB6C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuraSDK_MRZ/Pods-AccuraSDK_MRZ-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA30D04B23DEE96300BA0DC0 /* ShellScript */ = {
@@ -981,6 +981,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JA79VPTEAU;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1043,6 +1044,7 @@
 				DEVELOPMENT_TEAM = JA79VPTEAU;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

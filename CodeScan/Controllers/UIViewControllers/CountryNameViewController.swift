@@ -1,6 +1,6 @@
 
 import UIKit
-import SVProgressHUD
+//import SVProgressHUD
 import AccuraMRZ
 struct CountryName {
     let id : Int?
@@ -50,7 +50,7 @@ class CountryNameViewController: UIViewController, UITableViewDelegate, UITableV
             buttonOrtientation.isSelected = true
         }
 
-        SVProgressHUD.show(withStatus: "Loading...")
+//        SVProgressHUD.show(withStatus: "Loading...")
         lablelDataNotFound.isHidden = true
         viewStatusBar.backgroundColor = UIColor(red: 231.0 / 255.0, green: 52.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
         viewNavigationBar.backgroundColor = UIColor(red: 231.0 / 255.0, green: 52.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
@@ -97,7 +97,7 @@ class CountryNameViewController: UIViewController, UITableViewDelegate, UITableV
             self.tblViewCountryList.delegate = self
             self.tblViewCountryList.dataSource = self
             self.tblViewCountryList.reloadData()
-            SVProgressHUD.dismiss()
+//            SVProgressHUD.dismiss()
         }
     }
     
