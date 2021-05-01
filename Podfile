@@ -6,6 +6,6 @@ target 'AccuraSDK_MRZ' do
   use_frameworks!
   
   # Pods for CodeScan
-  pod 'AccuraMRZSDK'
+  pod 'AccuraMRZSDK', '1.0.3'
 end
 
