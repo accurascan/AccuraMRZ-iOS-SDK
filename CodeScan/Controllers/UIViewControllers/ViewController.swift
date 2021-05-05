@@ -153,7 +153,7 @@ class ViewController: UIViewController {
                         self._imageView.setNeedsLayout()
                         self._imageView.layoutSubviews()
                         self.setOCRData()
-                        self.ChangedOrientation()
+//                        self.ChangedOrientation()
                         self.accuraCameraWrapper?.startCamera()
                     }
                     let shortTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapToFocus(_:)))
@@ -180,7 +180,7 @@ class ViewController: UIViewController {
         self.shareScanningListing.removeAllObjects()
         isBackSide = false
         isCheckMRZData = false
-         self.ChangedOrientation()
+//         self.ChangedOrientation()
         if self.accuraCameraWrapper == nil {
                 setOCRData()
         }
