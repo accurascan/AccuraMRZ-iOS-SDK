@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -388,8 +388,8 @@
 				6104CC7420BB4E6D00AC428E /* Resources */,
 				FA30D04B23DEE96300BA0DC0 /* ShellScript */,
 				A3D1BDD82594A31A00339909 /* Embed Frameworks */,
-				286B09D1E49C9D2CF6002D53 /* [CP] Embed Pods Frameworks */,
-				E5D77F471BB969FF9F375567 /* [CP] Copy Pods Resources */,
+				4451D40C38031BBDB38C89E5 /* [CP] Embed Pods Frameworks */,
+				A4EBED918179BBC829D5ED44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -469,7 +469,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		286B09D1E49C9D2CF6002D53 /* [CP] Embed Pods Frameworks */ = {
+		4451D40C38031BBDB38C89E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,7 +508,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5D77F471BB969FF9F375567 /* [CP] Copy Pods Resources */ = {
+		A4EBED918179BBC829D5ED44 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -722,7 +722,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan",
-					"$(PROJECT_DIR)/CodeScan/AccuraScan/FrameWork",
 					"$(PROJECT_DIR)/CodeScan",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan/Framework",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan/External",
@@ -756,8 +755,8 @@
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_WORKSPACE = YES;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALIDATE_WORKSPACE = NO;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64\"";
 			};
 			name = Debug;
 		};
@@ -785,7 +784,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan",
-					"$(PROJECT_DIR)/CodeScan/AccuraScan/FrameWork",
 					"$(PROJECT_DIR)/CodeScan",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan/Framework",
 					"$(PROJECT_DIR)/CodeScan/AccuraScan/External",
@@ -817,8 +815,8 @@
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_WORKSPACE = YES;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALIDATE_WORKSPACE = NO;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64\"";
 			};
 			name = Release;
 		};
