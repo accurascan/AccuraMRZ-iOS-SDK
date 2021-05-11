@@ -6,7 +6,7 @@ Below steps to setup AccuraMRZ SDK's in your project.
 ## 1. Setup Accura MRZ
 
 #### Step 1: install the AccuraMRZSDK pod
-       pod 'AccuraMRZSDK', '1.0.4'
+    pod 'AccuraMRZSDK', '2.0.0'
          
 #### Step 2: Add license file in to your project.    
 
@@ -14,17 +14,7 @@ Below steps to setup AccuraMRZ SDK's in your project.
    
 Generate your Accura license from https://accurascan.com/developer/dashboard <br/>
             
-#### Step 3: Add `AccuraMRZSDK.swift` file in your projrct
-
-
-#### Step 4: Appdelegate.swift file in add<br />
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AccuraOCRSDK.configure()
-        return true
-    }
- 
-#### Step 5: To initialize sdk on app start:
+#### Step 3: To initialize sdk on app start:
 
     import AccuraMRZ
 
@@ -100,16 +90,15 @@ Generate your Accura license from https://accurascan.com/developer/dashboard <br
      
    * Flip camera
   ```
-     accuraCameraWrapper?.switchCamera()
+  accuraCameraWrapper?.switchCamera()
   ```
    * Enable Print logs in MRZ
-    
-    ```
-     accuraCameraWrapper?.showLogFile(true) // Set true to print log from MRZ SDK
-     ```
+   ```
+   accuraCameraWrapper?.showLogFile(true) // Set true to print log from MRZ SDK
+   ```
 
      
-#### Step 6 : Set CameraView
+#### Step 4 : Set CameraView
 
    Important Grant Camera and storage Permission.</br>
    supports Landscape Camera
