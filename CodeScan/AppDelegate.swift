@@ -1,7 +1,6 @@
 
 import UIKit
 import CoreData
-import Firebase
 import AccuraMRZ
 //list of Page Type
 public enum NAV_PAGETYPE: Int {
@@ -36,9 +35,6 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
         Thread.sleep(forTimeInterval: 0.0)
         
         UIApplication.shared.statusBarStyle = .lightContent
-        
-        AccuraOCRSDK.configure()
-        
         return true
     }
 
