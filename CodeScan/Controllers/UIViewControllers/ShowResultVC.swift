@@ -66,6 +66,7 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var expirationDateChecksum = ""
     var correctExpirationChecksum = ""
     var personalNumber = ""
+    var personalNumber2 = ""
     var personalNumberChecksum = ""
     var correctPersonalChecksum = ""
     var secondRowChecksum = ""
@@ -293,6 +294,9 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if let stcorrectPersonalChecksum: String = dictScanningData["correctPersonalChecksum"] as? String{
             self.correctPersonalChecksum = stcorrectPersonalChecksum
         }
+        if let strpersonalNumber2: String = dictScanningData["personalNumber2"] as? String{
+            self.personalNumber2 = strpersonalNumber2
+        }
         if let strsecondRowChecksum: String = dictScanningData["secondRowChecksum"] as? String {
             self.secondRowChecksum = strsecondRowChecksum
         }
@@ -316,7 +320,7 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func setOnlyMRZData(){
-        for index in 0..<22{
+        for index in 0..<23{
             var dict: [String:AnyObject] = [String:AnyObject]()
             switch index {
             case 0:
@@ -467,26 +471,26 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     arrDocumentData.append(dict)
                 }
                 break
-//            case 18:
-//                if correctPersonalChecksum != ""{
-//                    dict = [KEY_VALUE: correctPersonalChecksum,KEY_TITLE:"Correct Other ID Check No."] as [String : AnyObject]
-//                    arrDocumentData.append(dict)
-//                }
-//                break
             case 18:
+                if personalNumber2 != ""{
+                    dict = [KEY_VALUE: personalNumber2,KEY_TITLE:"Other ID 2"] as [String : AnyObject]
+                    arrDocumentData.append(dict)
+                }
+                break
+            case 19:
                 if secondRowChecksum != ""{
                     dict = [KEY_VALUE: secondRowChecksum,KEY_TITLE:"Second Row Check No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
                 }
                 break
-            case 19:
+            case 20:
                 if correctSecondrowChecksum != ""{
                     dict = [KEY_VALUE: correctSecondrowChecksum,KEY_TITLE:"Correct Second Row Check No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
                 }
                 break
                 
-            case 20:
+            case 21:
                 if issuedate != "" {
                     let issueDate = date(toFormatedDate: issuedate)
                     if issueDate != "" && issueDate != nil{
@@ -496,7 +500,7 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 }
                
                 break
-            case 21:
+            case 22:
                 if departmentNumber != ""{
                     dict = [KEY_VALUE: departmentNumber,KEY_TITLE:"Department No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
@@ -516,7 +520,7 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
      */
     func setData(){
         //Set tableView Data
-        for index in 0..<25 + appDocumentImage.count{
+        for index in 0..<26 + appDocumentImage.count{
             var dict: [String:AnyObject] = [String:AnyObject]()
             switch index {
             case 0:
@@ -684,25 +688,25 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     arrDocumentData.append(dict)
                 }
                 break
-//            case 20:
-//                if(correctPersonalChecksum != "") {
-//                    dict = [KEY_VALUE: correctPersonalChecksum,KEY_TITLE:"Correct Other ID Check No."] as [String : AnyObject]
-//                    arrDocumentData.append(dict)
-//                }
-//                break
             case 20:
+                if personalNumber2 != ""{
+                    dict = [KEY_VALUE: personalNumber2,KEY_TITLE:"Other ID 2"] as [String : AnyObject]
+                    arrDocumentData.append(dict)
+                }
+                break
+            case 21:
                 if(secondRowChecksum != "") {
                     dict = [KEY_VALUE: secondRowChecksum,KEY_TITLE:"Second Row Check No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
                 }
                 break
-            case 21:
+            case 22:
                 if(correctSecondrowChecksum != "") {
                     dict = [KEY_VALUE: correctSecondrowChecksum,KEY_TITLE:"Correct Second Row Check No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
                 }
                 break
-            case 22:
+            case 23:
                 if issuedate != "" {
                     let issueDate = date(toFormatedDate: issuedate)
                     if issueDate != "" && issueDate != nil{
@@ -711,17 +715,17 @@ class ShowResultVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     }
                 }
                 break
-            case 23:
+            case 24:
                 if departmentNumber != ""{
                     dict = [KEY_VALUE: departmentNumber,KEY_TITLE:"Department No."] as [String : AnyObject]
                     arrDocumentData.append(dict)
                 }
                 break
-            case 24:
+            case 25:
                 dict = [KEY_DOC1_IMAGE: !appDocumentImage.isEmpty ? appDocumentImage[0] : nil] as [String : AnyObject]
                 arrDocumentData.append(dict)
                 break
-            case 25:
+            case 26:
                 dict = [KEY_DOC2_IMAGE: appDocumentImage.count == 2 ? appDocumentImage[1] : nil] as [String : AnyObject]
                 arrDocumentData.append(dict)
                 break

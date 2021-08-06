@@ -6,7 +6,7 @@ Below steps to setup AccuraMRZ SDK's in your project.
 ## 1. Setup Accura MRZ
 
 #### Step 1: install the AccuraMRZSDK pod
-    pod 'AccuraMRZSDK', '2.0.0'
+    pod 'AccuraMRZSDK', '2.1.0'
          
 #### Step 2: Add license file in to your project.    
 
