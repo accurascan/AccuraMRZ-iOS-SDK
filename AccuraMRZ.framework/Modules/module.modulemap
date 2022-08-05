@@ -1,0 +1,6 @@
+framework module AccuraMRZ {
+  umbrella header "AccuraMRZ.h"
+
+  export *
+  module * { export * }
+}

@@ -6,6 +6,9 @@ target 'AccuraSDK_MRZ' do
   use_frameworks!
   
   # Pods for CodeScan
-  pod 'AccuraMRZSDK', '2.1.0'
+  #pod 'AccuraMRZSDK', '2.1.0'
+pod 'SVProgressHUD'
+ pod 'AFNetworking','3.2.1'
+ pod 'GoogleMLKit'
 end
 
